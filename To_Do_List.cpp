@@ -7,17 +7,25 @@ int len = 0;
 
 void addtask()
 {
-    string task;
+    if (len == 100)
+    {
+        cout << endl
+             << "NO SPACE LEFT!!!" << endl;
+    }
+    else
+    {
+        string task;
 
-    cout << "Enter task : ";
-    cin.ignore();
+        cout << "Enter task : ";
+        cin.ignore();
 
-    getline(cin, task);
+        getline(cin, task);
 
-    tasks[len] = task;
-    len++;
+        tasks[len] = task;
+        len++;
 
-    cout << "Task added successfully" << endl;
+        cout << "Task added successfully" << endl;
+    }
 }
 
 void removetask()
